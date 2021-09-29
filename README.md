@@ -30,5 +30,25 @@ Mentorship Eligibility Table
 * Also, from the Mentorship Eligibility the company can see the order of positions which will be free soon. Based on this information HR can set the priorities and plan the hiring in advance.
 
 
+## Summary
 
+In the end, there are two questions which answers may provide additional insight:
+
+1) How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+
+The number many people who are about to retire is 90398. 
+This number can be retrieved form Retiring Titles table using the query:
+```
+SELECT SUM(count) 
+FROM retiring_titles;
+```
+
+2) Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+
+There are 1549 employees who are ready to mentor the next generation, which shows that with help of quality management there is enough people to perform the task.
+This number can be retrieved from Mentorship Eligibility table using the query:
+```
+SELECT COUNT(first_name)
+FROM mentorship_eligibility;
+```
 
